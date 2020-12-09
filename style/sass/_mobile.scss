@@ -1,0 +1,33 @@
+@import "variables";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $font;
+  background-color: $neutral-one;
+  background: {
+    image: url("/images/bg-top.svg"), url("/images/bg-bottom.svg");
+    position: top -20px right -120px, bottom left;
+    repeat: no-repeat, no-repeat;
+    size: 60%, 50%;
+  }
+}
+
+.content-container {
+  text-align: center;
+  .main-title {
+    color: $neutral-three;
+    padding: 50px 0 30px;
+    font-size: 42px;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,90 @@
+@import "variables";
+
+%card-shared {
+  margin: 15px 0;
+  border-radius: 5px;
+  max-width: 330px;
+  width: 90%;
+  box-shadow: 10px 15px 15px -12px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  &-light {
+    @extend %card-shared;
+    background: $white;
+  }
+
+  &-primary {
+    @extend %card-shared;
+    background: linear-gradient($gradient-bg);
+  }
+}
+
+%card-content-shared {
+  padding: 30px;
+  text-align: center;
+}
+
+.card-content {
+  &-light {
+    @extend %card-content-shared;
+    color: $neutral-three;
+    .price-monthly,
+    .price-annually {
+      color: $neutral-four;
+    }
+  }
+  &-primary {
+    @extend %card-content-shared;
+    color: $white;
+  }
+}
+
+.title {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.price-monthly,
+.price-annually {
+  font-size: 60px;
+  animation-name: animation;
+  animation-duration: 4s;
+}
+
+li {
+  border-top: 1px solid $neutral-two;
+  padding: 15px 0;
+  list-style: none;
+}
+
+.list {
+  border-bottom: 1px solid $neutral-two;
+  padding-top: 20px;
+}
+
+.dollar {
+  font-size: 40px;
+  vertical-align: 15%;
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 2;
+  }
+  40% {
+    opacity: 4;
+  }
+  60% {
+    opacity: 6;
+  }
+  80% {
+    opacity: 8;
+  }
+  100% {
+    opacity: 1;
+  }
+}

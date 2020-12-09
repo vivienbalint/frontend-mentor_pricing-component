@@ -1,0 +1,56 @@
+@import "variables";
+@import "card";
+
+%btn-shared {
+  width: 100%;
+  letter-spacing: 2px;
+  font-size: 13px;
+  text: {
+    transform: uppercase;
+    align: center;
+    decoration: none;
+  }
+  border-radius: 5px;
+  padding: 13px 0;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.btn {
+  &-primary {
+    @extend %btn-shared;
+    background: linear-gradient($gradient);
+    border: 1px solid $neutral-three;
+    &:hover {
+      background: transparent;
+      border: 1px solid $neutral-three;
+      animation-name: animation;
+      animation-duration: 2s;
+      a {
+        color: $neutral-three;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+  &-light {
+    @extend %btn-shared;
+    background: $white;
+    border: 1px solid $white;
+    &:hover {
+      background: transparent;
+      border: 1px solid $white;
+      animation-name: animation;
+      animation-duration: 2s;
+      a {
+        color: $white;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $neutral-three;
+    }
+  }
+}

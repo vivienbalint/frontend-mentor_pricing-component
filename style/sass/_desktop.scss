@@ -1,0 +1,26 @@
+@import "variables";
+
+@media (min-width: 1024px) {
+  body {
+    background: {
+      position: top right, bottom left;
+      repeat: no-repeat, no-repeat;
+      size: 25%, 25%;
+    }
+  }
+  .content-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card-container {
+    flex-direction: row;
+    align-items: baseline;
+    width: 100%;
+
+    .card-content-primary {
+      padding: 50px 30px;
+    }
+  }
+}
