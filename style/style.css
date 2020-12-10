@@ -18,7 +18,7 @@ body {
 .content-container .main-title {
   color: #6d708d;
   padding: 50px 0 30px;
-  font-size: 42px;
+  font-size: 35px;
 }
 
 .card-container {
@@ -51,6 +51,10 @@ body {
     padding: 50px 30px;
   }
 }
+.card-container {
+  margin-bottom: 50px;
+}
+
 .card-primary, .card-light {
   margin: 15px 0;
   border-radius: 5px;
@@ -130,6 +134,10 @@ li {
     opacity: 1;
   }
 }
+.card-container {
+  margin-bottom: 50px;
+}
+
 .card-primary, .card-light {
   margin: 15px 0;
   border-radius: 5px;
@@ -265,7 +273,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 50px;
+  padding-bottom: 35px;
 }
 .pricing-switcher p {
   color: #b3b5c6;
@@ -322,14 +330,7 @@ li {
 }
 
 /* FOOTER */
-#page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
 .attribution {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 1rem;
   padding-top: 10px;

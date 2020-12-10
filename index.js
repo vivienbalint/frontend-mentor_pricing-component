@@ -2,7 +2,7 @@ let monthly = document.querySelectorAll(".price-monthly");
 let annually = document.querySelectorAll(".price-annually");
 const slider = document.getElementById("slider");
 
-function togglePricing() {
+slider.addEventListener("click", (e) => {
   if (!slider.checked) {
     annually.forEach((item) => {
       item.classList.toggle("hide");
@@ -18,4 +18,11 @@ function togglePricing() {
       annuallyPrice.classList.remove("hide");
     });
   }
-}
+});
+
+document.addEventListener("keypress", (e) => {
+  if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+    e.preventDefault();
+    slider.click();
+  }
+});
